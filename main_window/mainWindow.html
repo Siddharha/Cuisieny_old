@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="mainWindow.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="mainWindow.js"></script>
+</head>
+<body>
+    <div id="title-bar">
+
+        <div id="title">Home-Cuisiney</div>
+
+        <div id="title-bar-btns">
+
+             <button id="min-btn"  onclick="mnuAction(2);">-</button>
+
+             <button id="max-btn"  onclick="mnuAction(1);">+</button>
+
+             <button id="close-btn" onclick="mnuAction(0);"><img src="./src/tools/ic_close.svg" alt="close"></button>
+
+        </div>
+
+   </div>
+
+   <div class="navbar">
+    
+    <div class="dropdown">
+      <button class="dropbtn">File 
+        <!-- <i class="fa fa-caret-down"></i> -->
+      </button>
+      <div class="dropdown-content">
+        <a href="#" onclick="addItem();">Add Items</a>
+        <a href="#">Preferances</a>
+        <a href="#">Exit</a>
+      </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Categories 
+          
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Filter Item</a>
+          <a href="#">Search by Category</a>
+          <a href="#">your favourite</a>
+        </div>
+      </div> 
+
+      <div class="dropdown">
+        <button class="dropbtn">Help 
+          
+        </button>
+        <div class="dropdown-content">
+          <a href="#">About</a>
+        
+        </div>
+      </div> 
+  </div>
+
+</body>
+</html>
