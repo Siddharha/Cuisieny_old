@@ -20,7 +20,8 @@ app.on('ready',function(){
         'y': mainWindowState.y,
         'width': mainWindowState.width,
         'height': mainWindowState.height,
-        frame: false
+        frame: false,
+        titleBarStyle: 'default'
     });
 
     mainWindowState.manage(mainWindow);
@@ -77,7 +78,7 @@ const lItem_add = ipcMain.on('mnu:Add',function(e,action){
 
     if (action){
         showAddItemWindow();
-    
+
     }
 })
 
