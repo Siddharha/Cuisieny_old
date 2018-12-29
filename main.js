@@ -49,7 +49,12 @@ const lItem = ipcMain.on('mnu_action',function(e,action){
         theWindow.close();
             break;
         case 1:
-           theWindow.maximize();
+
+        if(theWindow.isMaximized()){
+            theWindow.unmaximize();
+        }else{
+            theWindow.maximize();
+        }
            break;
 
            case 2:
