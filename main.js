@@ -50,11 +50,20 @@ const lItem = ipcMain.on('mnu_action',function(e,action){
             break;
         case 1:
 
-        if(theWindow.isMaximized()){
-            theWindow.unmaximize();
+        if(process.platform != 'darwin'){
+            if(theWindow.isMaximized()){
+                theWindow.unmaximize();
+            }else{
+                theWindow.maximize();
+            }
         }else{
-            theWindow.maximize();
+            if(theWindow.isFullScreen()){
+                theWindow.setFullScreen(false);
+            }else{
+                theWindow.setFullScreen(true);
+            }
         }
+        
            break;
 
            case 2:
